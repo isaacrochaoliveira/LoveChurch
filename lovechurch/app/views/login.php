@@ -1,51 +1,42 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
-<link rel="stylesheet" type="text/css" href="<?php echo URL_BASE ?>assets/css/style.css">
-<link rel="stylesheet" type="text/css" href="<?php echo URL_BASE ?>assets/css/auxiliar.css">
-<link rel="stylesheet" type="text/css" href="<?php echo URL_BASE ?>assets/css/grade.css">
-<link rel="stylesheet" type="text/css" href="<?php echo URL_BASE ?>assets/css/m-style.css">
-
-
-<link rel="stylesheet" type="text/css" href="<?php echo URL_BASE ?>assets/css/login.css">
-<!------ Include the above in your HEAD tag ---------->
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="<?= URL_BASE ?>assets/css/style.css">
+</head>
 <body>
-    <div id="login">
-     
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
-                    <!-- 
-                  <img src="<?php  echo URL_BASE ?>assets/img/logo.png" class="m-aut d-block">
-                   -->
 
-                   
-                        <form action="<?php echo URL_BASE ."login/logar" ?>" method="post">
-                        
-                            <img src="<?php  echo URL_BASE ?>assets/img/logo.png" class="m-aut d-block">
-                            <?php 
-                            $this->verMsg();
-                            $this->verErro();
-                            
-                            ?>
-                            <div class="form-group">
-                                <label for="username" class="text-info">Login:</label><br>
-                                <input type="text" name="login"  class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="text-info">Senha:</label><br>
-                                <input type="text" name="senha"  class="form-control">
-                            </div>
-                            <div class="form-group">
-                                
-                                <input type="submit" value="Entrar" class="btn btn-info btn-md" >
-                            </div>
-                            
-                        </form>
+</body>
+    <div class="mx-auto">
+        <div class="container">
+            <h1 class="mb-5">LoveChurch</h1>
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <div class="form-floating">
+                            <input type="text" name="email" id="email" class="form-control">
+                            <label for="email">E-mail</label>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="row mt-4">
+                    <div class="col-md-4 mx-auto">
+                        <div class="form-floating">
+                            <input type="password" name="senha" id="senha" class="form-control">
+                            <label for="senha">Senha</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-3 mx-auto">
+                        <button type="submit" class="btn-submit w-100">Logar</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-</body>
+</html>

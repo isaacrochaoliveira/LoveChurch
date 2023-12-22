@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+	background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6)), url("../img/login/background__login.jpg") no-repeat;
+	background-size: cover;
+}
+
+div.container {
+	text-align: center;
+	margin: 12% auto;
+}
+
+h1 {
+	font-size: 50pt;
+	color: white;
+	font-family: Arial, sans-serif;
+}
+.btn-submit {
+	background: transparent;
+	color: white;
+	padding: 18px 0px;
+	border: 1px solid white;
+}

@@ -5,7 +5,7 @@ define("USUARIO", "root");
 define("SENHA", "");
 define("CHARSET","UTF8");
 
-define('CONTROLLER_PADRAO', 'home');
+define('CONTROLLER_PADRAO', 'login');
 define('METODO_PADRAO', 'index');
 define('NAMESPACE_CONTROLLER', 'app\\controllers\\');
 define('TIMEZONE',"America/Fortaleza");
