@@ -1,26 +1,19 @@
 <?php
 define("SERVIDOR", "localhost");
-define("BANCO", "edsure32_pousada");
-// define("BANCO", "edsure33_pousada");
+define("BANCO", "lovechurch");
 define("USUARIO", "root");
 define("SENHA", "");
-//  define("SENHA", "@root123");
 define("CHARSET","UTF8");
-
 
 define('CONTROLLER_PADRAO', 'home');
 define('METODO_PADRAO', 'index');
 define('NAMESPACE_CONTROLLER', 'app\\controllers\\');
 define('TIMEZONE',"America/Fortaleza");
-define('CAMINHO'            , realpath('./'));
+define('CAMINHO', realpath('./'));
 define("TITULO_SITE","mjailton-ligando vc ao mundo do conhecimento");
 
-// define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"].'/projetos/hotel/projeto-hotel/hotel/');
-define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"].'/www/edsure/projeto-hotel/projeto-hotel/hotel/');
-
-// define('URL_IMAGEM', "http://". $_SERVER['HTTP_HOST'] . "/projetos/hotel/projeto-hotel/hotel/assets/");
-define('URL_IMAGEM', "http://". $_SERVER['HTTP_HOST'] . "/www/edsure/projeto-hotel/projeto-hotel/hotel/assets/");
-
+define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"].'/projects/LoveChurch/lovechurch/');
+define('URL_IMAGEM', "http://". $_SERVER['HTTP_HOST'] . "/projects/LoveChurch/lovechurch/assets/");
 define("SESSION_LOGIN","usuario_agenda_logado");
 
 $config_upload["verifica_extensao"] = false;
