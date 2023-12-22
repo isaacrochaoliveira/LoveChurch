@@ -1,125 +1,75 @@
-<div id="menu">
-    <div class="menu-lateral" id="itens">
-        <figure>
-            <div class="thumb"><img src="<?php echo URL_BASE ?>assets/img/foto01.png"></div>
-            <figcaption>
-                <strong>Edsure</strong>
-                <small>Desenvolvimento</small>
-            </figcaption>
-        </figure>
-        <ul class="menul">
-            <li>
-                <a href="<?php echo URL_BASE ?>" class="home">
-                    <i class="ico home"></i>
-                    HOME
+<header>
+    <div class="px-3 py-4 text-bg-dark border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="<?= URL_BASE ?>home" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <h1 class="size-45pt text-primary">LoveChurch</h1>
                 </a>
-            </li>
-            <li>
-                <div class="dropright">
-                    <a href="">
-                        <i class="ico perfil"></i>
-                        Pessoas
-                    </a>
-                    <ul class="dropdown-menu bg-light">
-                        <li class="dropdown-li"><a class="dropdown-item" href="<?= URL_BASE ?>hospedes">Hóspedes</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="<?= URL_BASE ?>funcionarios">Funcionários</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="<?= URL_BASE ?>fornecedores">Fornecedores</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="<?= URL_BASE ?>usuarios">Usuários</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropright">
-                    <a href="">
-                        <i class="ico curso"></i>
-                        CADASTROS
-                    </a>
-                    <ul class="dropdown-menu bg-light">
-                        <li class="dropdown-li"><a class="dropdown-item" href="<?php echo URL_BASE . "quarto"?>">Tipo de Quarto</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Quarto</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Cargo</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Formas Pgto</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Grupos de Acesso</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Acesso</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropright">
-                    <a href="">
-                        <i class="ico reserva"></i>
-                        RESERVA
-                    </a>
-                    <ul class="dropdown-menu bg-light">
-                        <li class="dropdown-li"><a class="dropdown-item" href="<?= URL_BASE ?>reservas/index">Reservas</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Filtrar Reservas action</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Quartos Disponíveis</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropright">
-                    <a href="">
-                        <i class="ico venda"></i>
-                        VENDAS
-                    </a>
-                    <ul class="dropdown-menu bg-light">
-                        <li class="dropdown-li"><a class="dropdown-item" href="<?= URL_BASE ?>products/index">Produtos</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Serviços</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Lista de Vendas</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Lista de Produtos</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropright">
-                    <a href="#">
-                        <i class="ico financeiro"></i>
-                        FINANCEIRO
-                    </a>
-                    <ul class="dropdown-menu bg-light">
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Contas a Pagar</a>
-                        <li class="dropdown-li"><a class="dropdown-item" href="<?= URL_BASE ?>receber">Contas a Receber</a>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Compras</a>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Relatórios</a>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Demostrativo de Lucro</a>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropright">
-                    <a href="">
-                        <i class="ico produto"></i>
-                        PRODUTOS
-                    </a>
-                    <ul class="dropdown-menu bg-light">
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Categorias</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="<?= URL_BASE ?>produtos">Produtos</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Entradas</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Saídas</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Estoque Baixo</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropright">
-                    <a href="">
-                        <i class="ico servico"></i>
-                        SERVIÇOS
-                    </a>
-                    <ul class="dropdown-menu bg-light">
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Action</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Another action</a></li>
-                        <li class="dropdown-li"><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <i class="ico sair"></i>
-                    SAIR
-                </a>
-            </li>
-        </ul>
+
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a href="#" class="nav-link text-secondary">
+                            <div class="d-block text-center mb-1">
+                                <span class="material-symbols-outlined">
+                                    home
+                                </span>
+                            </div>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <div class="d-block text-center mb-1">
+                                <span class="material-symbols-outlined">
+                                    help
+                                </span>
+                            </div>
+                            DUNNO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <div class="d-block text-center mb-1">
+                                <span class="material-symbols-outlined">
+                                    help
+                                </span>
+                            </div>
+                            DUNNO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <div class="d-block text-center mb-1">
+                                <span class="material-symbols-outlined">
+                                    help
+                                </span>
+                            </div>
+                            DUNNO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <div class="d-block text-center mb-1">
+                                <span class="material-symbols-outlined">
+                                    help
+                                </span>
+                            </div>
+                            DUNNO
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="px-3 py-2 border-bottom mb-3">
+        <div class="container d-flex flex-wrap justify-content-center">
+            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+            <div class="text-end">
+                <button type="button" class="btn btn-light text-dark me-2">Login</button>
+                <button type="button" class="btn btn-primary">Sign-up</button>
+            </div>
+        </div>
+    </div>
+</header>

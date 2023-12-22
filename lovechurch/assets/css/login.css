@@ -3,6 +3,7 @@
 body {
 	background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6)), url("../img/login/background__login.jpg") no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 
 div.container {

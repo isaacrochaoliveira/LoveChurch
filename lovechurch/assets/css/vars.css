@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+:root {
+	/* FONTS-FAMILYS */
+	--font-great-vibes: 'Great Vibes';
+	--font-satisfy: 'Satisfy';
+	--font-roboto: 'Roboto';
+
+	/* CORES */
+	--colors-blue: #0B5ED7;
+}

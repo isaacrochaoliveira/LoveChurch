@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body {
+	font-family: var(--font-roboto);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-great-vibes);
+}
+
+h1 {
+	font-size: 100px;
+}
+
+h2 {
+	font-size: 80px;
+}
+
+h3 {
+	font-size: 60px;
+}
+
+h4 {
+	font-size: 50px;
+}
+
+h5 {
+	font-size: 30px;
+}
+
+h6 {
+	font-kerning: 20px;
+}
+
+a {
+	color: var(--colors-blue);
+}

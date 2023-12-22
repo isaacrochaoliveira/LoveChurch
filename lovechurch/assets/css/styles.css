@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* CLASSES PADRÕES */
+.size-45pt {
+	font-size: 45pt;
+}
+
+/* HEADER'S CSS */
+header span {
+	font-size: 24pt !important;
+}
+
+header ul li {
+	padding-right: 5px;
+}
