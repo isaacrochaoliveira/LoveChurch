@@ -9,4 +9,6 @@
 	/* CORES */
 	--colors-blue: #0B5ED7;
 	--colors-gray: #ccc;
+	--colors-light: #fff;
+	--colors-dark: #212529;
 }

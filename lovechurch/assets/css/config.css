@@ -44,6 +44,10 @@ a {
 	font-family: var(--font-satisfy);
 }
 
+.font-roboto {
+	font-family: var(--font-roboto);
+}
+
 .bg-gray {
 	background-color: var(--colors-gray) !important;
 }
@@ -58,4 +62,12 @@ a {
 
 .size-36pt {
 	font-size: 36pt;
+}
+
+.size-14pt {
+	font-size: 14pt;
+}
+
+.size-15pt {
+	font-size: 15pt;
 }
