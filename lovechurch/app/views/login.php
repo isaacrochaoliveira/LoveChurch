@@ -1,6 +1,3 @@
-<?php 
-I($_SESSION);
-?>
 <!DOCTYPE html>
 <html>
 <head>

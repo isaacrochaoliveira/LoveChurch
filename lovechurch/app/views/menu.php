@@ -57,15 +57,25 @@
                             DUNNO
                         </a>
                     </li>
+                    <li>
+                        <a href="#" class="nav-link text-danger">
+                            <div class="d-block text-center mb-1">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                            </div>
+                            LOGOUT
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="px-3 py-2 border-bottom mb-3">
         <div class="container d-flex flex-wrap justify-content-center">
-            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form>
+            <div class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+                <p><?= $_SESSION['email'] ?></p>
+            </div>
             <div class="text-end">
                 <button type="button" class="btn btn-light text-dark me-2">Login</button>
                 <button type="button" class="btn btn-primary">Sign-up</button>
