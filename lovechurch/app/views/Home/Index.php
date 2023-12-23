@@ -40,3 +40,8 @@
 		</div>
 	</div>
 </section>
+<section id="prays__groups">
+	<div class="container">
+		<h2>Pray's Groups. Did you know that?</h2>
+	</div>
+</section>
