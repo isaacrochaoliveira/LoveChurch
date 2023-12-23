@@ -21,6 +21,8 @@
 		<div class="square__datas">
 			<i class="fa-solid fa-person-praying"></i>
 			<h5>Pregadores</h5>
+			<hr>
+			<p></p>
 		</div>
 	</div>
 </section>
