@@ -16,3 +16,11 @@
 		</div>
 	</div>
 </section>
+<section id="section__datas">
+	<div class="container">
+		<div class="square__datas">
+			<i class="fa-solid fa-person-praying"></i>
+			<h5>Pregadores</h5>
+		</div>
+	</div>
+</section>

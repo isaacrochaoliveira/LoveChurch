@@ -14,9 +14,11 @@ header ul li {
 /* HOME CSS */
 
 #section__begin {
-	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../img/home/background__paper.jpg') no-repeat;
+	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/home/background__paper.jpg') no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	background-position: center;
+	padding: 100px 0px;
 }
 
 .container #letspray__background {
@@ -44,4 +46,14 @@ header ul li {
 	text-decoration: none;
 	font-size: 14pt;
 	margin-top: 10px;
+}
+
+/* SECTION DATAS CSS */
+
+#section__datas {
+	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/home/background__paper.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	padding: 100px 0px;
 }
