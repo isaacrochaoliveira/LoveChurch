@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-danger">
+                        <a href="<?= URL_BASE ?>/login/logoff" class="nav-link text-danger">
                             <div class="d-block text-center mb-1">
                                 <span class="material-symbols-outlined">
                                     logout
@@ -74,11 +74,7 @@
     <div class="px-3 py-2 border-bottom mb-3">
         <div class="container d-flex flex-wrap justify-content-center">
             <div class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-                <p><?= $_SESSION['email'] ?></p>
-            </div>
-            <div class="text-end">
-                <button type="button" class="btn btn-light text-dark me-2">Login</button>
-                <button type="button" class="btn btn-primary">Sign-up</button>
+                <p><?= $_SESSION['nome'] ?></p>
             </div>
         </div>
     </div>

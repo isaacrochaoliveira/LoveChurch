@@ -54,4 +54,17 @@ class LoginController extends Controller {
  		$_SESSION['nome'] = $usuario[0]->nome;
  		$_SESSION['email'] = $usuario[0]->email;
  	}
+
+ 	/**
+ 	 * Método Responsável por fazer o logout do usuário
+ 	 */
+ 	public function logoff() {
+ 		unset($_SESSION['id']);
+ 		unset($_SESSION['nome']);
+ 		unset($_SESSION['email']);
+
+ 		session_destroy();
+
+ 		$this->redirect(URL_BASE . 'login');
+ 	}
 }
