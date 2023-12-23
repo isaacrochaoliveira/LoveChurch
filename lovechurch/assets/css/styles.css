@@ -57,3 +57,12 @@ header ul li {
 	background-attachment: fixed;
 	padding: 100px 0px;
 }
+
+#section__datas .square__datas {
+	text-align: center;
+	padding: 20px 40px;
+}
+
+#section__datas .square__datas i {
+	font-size: 26pt;
+}
