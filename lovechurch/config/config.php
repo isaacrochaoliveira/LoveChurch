@@ -16,6 +16,8 @@ define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"].'/projects/LoveChurch/lovec
 define('URL_IMAGEM', "http://". $_SERVER['HTTP_HOST'] . "/projects/LoveChurch/lovechurch/assets/");
 define("SESSION_LOGIN","usuario_agenda_logado");
 
+define("VERSION", 'v1.0.0');
+
 $config_upload["verifica_extensao"] = false;
 $config_upload["extensoes"]         = array(".gif",".jpeg", ".png", ".bmp", ".jpg");
 $config_upload["verifica_tamanho"]  = true;

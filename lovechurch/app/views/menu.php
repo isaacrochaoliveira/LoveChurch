@@ -3,7 +3,7 @@
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="<?= URL_BASE ?>home" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                    <h1 class="size-45pt text-primary">LoveChurch</h1>
+                    <h1 class="size-45pt">LoveChurch</h1>
                 </a>
 
                 <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">

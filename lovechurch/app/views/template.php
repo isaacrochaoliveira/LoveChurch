@@ -16,11 +16,15 @@
 	<link rel="stylesheet" type="text/css" href="<?= URL_BASE ?>assets/css/styles.css">
 </head>
 <body>
-	<?php include "menu.php" ?>
-		<div class="base-geral" id="base_geral">
-			<?php $this->load($view, $viewData) ?>
-		</div>
+	<?php 
+		include "menu.php" 
+	?>
+	<div class="base-geral" id="base_geral">
+		<?php $this->load($view, $viewData) ?>
 	</div>
-	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<?php 
+		include "rodape.php";
+	?>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
