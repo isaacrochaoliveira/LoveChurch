@@ -66,3 +66,17 @@ header ul li {
 #section__datas .square__datas i {
 	font-size: 26pt;
 }
+
+/* SECTION PRAY'S GRUOPS */
+
+#prays__groups {
+	padding: 100px 0px;
+}
+
+#prays__groups .whole_square_groups img {
+	width: 100%;
+}
+
+#prays__groups .whole_square_groups h5 {
+	font-weight: 600;
+}

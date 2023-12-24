@@ -8,7 +8,7 @@
 
                 <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                     <li>
-                        <a href="#" class="nav-link text-secondary">
+                        <a href="<?= URL_BASE ?>home" class="nav-link text-secondary">
                             <div class="d-block text-center mb-1">
                                 <span class="material-symbols-outlined">
                                     home
