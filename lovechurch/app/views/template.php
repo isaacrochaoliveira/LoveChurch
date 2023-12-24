@@ -27,8 +27,6 @@
 		include "rodape.php";
 	?>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-	<script src="<?= URL_BASE ?>assets/plugins/jquery/jquery.min.js"></script>
-	<script src="<?= URL_BASE ?>assets/plugins/toastr/toastr.min.js"></script>
 	<script src="<?= URL_BASE ?>assets/js/myFunctions/primary.js"></script>
 </body>
 </html>

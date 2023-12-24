@@ -5,16 +5,16 @@ class Flash{
     public static function setMsg($msg, $tipo=1){
         //1 - sucesso / -1 erro / 2 info / 3 Warning
         $classe = "success";
-        $icone  = "fa-check";
+        $icone  = "fa-solid fa-trophy";
         if($tipo==-1){
             $classe = "error";
-            $icone  = "fa-exclamation-triangle";
+            $icone  = "fa-solid fa-xmark";
         }else if($tipo==2){
             $classe="info";
-            $icone  = "fa-exclamation-circle";
+            $icone  = "fa-solid fa-circle";
         } else if ($tipo == 3) {
             $classe="warning";
-            $icone  = "fa-exclamation-circle";
+            $icone  = "fa-solid fa-triangle-exclamation";
         }
         
         $resultado = (object) array(

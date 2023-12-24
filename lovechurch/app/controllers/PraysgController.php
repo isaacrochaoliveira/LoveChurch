@@ -49,8 +49,19 @@ class PraysgController extends Controller {
 		$pray->nome_grupo = isset($_POST['nome']) ? $_POST['nome'] : '';
 		$pray->descricao_grupo = isset($_POST['descricao']) ? $_POST['descricao'] : '';
 		$pray->versiculobase_group = isset($_POST['versiculo_base']) ? $_POST['versiculo_base'] : '';
+		$pray->participando_grupo = 0;
+		$pray->saiu_grupo = 0;
+		$pray->data_group = Date('Y-m-d');
+		$pray->hora_grupo = Date('H:m:s');
+		$pray->foto_grupo = 'sem-foto.jpg';
+		$pray->id_usuario = $_SESSION['id'];
 
 		PraysgService::salvar($pray, $this->id, $this->table);
+		Flash::setMsg('Grupo Cadastrado Com Sucesso!');
 		$this->redirect(URL_BASE . 'praysg');
 	}
+
+	/**
+	 * 
+	 */
 }
