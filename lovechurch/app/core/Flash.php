@@ -3,14 +3,17 @@ namespace app\core;
 
 class Flash{
     public static function setMsg($msg, $tipo=1){
-        //1 - sucesso / -1 erro / 2 info
-        $classe = "sucesso";
+        //1 - sucesso / -1 erro / 2 info / 3 Warning
+        $classe = "success";
         $icone  = "fa-check";
         if($tipo==-1){
-            $classe = "erro";
+            $classe = "error";
             $icone  = "fa-exclamation-triangle";
         }else if($tipo==2){
             $classe="info";
+            $icone  = "fa-exclamation-circle";
+        } else if ($tipo == 3) {
+            $classe="warning";
             $icone  = "fa-exclamation-circle";
         }
         
