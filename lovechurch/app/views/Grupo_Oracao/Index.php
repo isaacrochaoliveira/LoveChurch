@@ -3,7 +3,7 @@
 	$this->verErro();
  ?>
 <section id="prays__groups">
-	<div class="d-flex flex-wrap justify-content-center whole_square_groups mt-4 mx-2">
+	<div class="d-flex flex-wrap justify-content-center whole_square_groups mx-2">
 		<div class="col-md-4 card" style="width: 26rem;">
 				<img src="<?= URL_IMAGEM ?>img/praysgroups/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
 			<div class="card-body">

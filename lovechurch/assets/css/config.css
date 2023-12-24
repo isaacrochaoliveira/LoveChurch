@@ -91,3 +91,7 @@ a {
 .size-14pt {
 	font-size: 14pt;
 }
+
+.ls-2px {
+	letter-spacing: 2px;
+}
