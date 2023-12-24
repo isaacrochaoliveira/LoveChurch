@@ -6,6 +6,8 @@ use app\core\Controller;
 use app\models\service\Service;
 use app\models\service\PraysgService;
 
+use app\core\Flash;
+
 class PraysgController extends Controller {
 	/**
 	 * Pârametro Responsável por carregar o nome da tabela desta página 
