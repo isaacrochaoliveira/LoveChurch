@@ -17,7 +17,7 @@
 				?>
 					<div class="col-md-4 card mx-2" style="width: 26rem;">
 							<img src="<?= URL_IMAGEM ?>img/praysgroups/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
-						<div class="card-body">
+						<div class="card-body">	
 		    				<h5 class="card-title font-roboto"><?= $grupos[$key]->nome_grupo ?></h5>
 		    				<p class="card-text"><?= $grupos[$key]->descricao_grupo ?></p>
 		    				<?php 

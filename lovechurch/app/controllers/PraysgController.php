@@ -62,6 +62,13 @@ class PraysgController extends Controller {
 	}
 
 	/**
-	 * 
+	 * Método Responsável por carregar a view de configuração do grupo
+	 * @param integer $id_group
 	 */
+	public function config($id_group) {
+		$dados['grupo'] = PraysgService::select("SELECT * FROM $this->table WHERE $this->id = '$id_group'");
+		$dados['view'] = 'Grupo_Oracao/Config';
+
+		$this->load("template", $dados);
+	}
 }
