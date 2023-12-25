@@ -36,13 +36,42 @@
 					</div>
 					<div>
 						<p class="size-15pt">
-							<?= Date("d/m/Y", strtotime($grupo[0]->data_group)) ?>
+							<?= Date("M, D Y - m/d/Y", strtotime($grupo[0]->data_group)) ?>
 						</p>
 					</div>
 				</div>
-				<div class=>
+				<div class="d-flex flex-wrap justify-content-between">
 					<div>
-						
+						<p class="size-15pt">
+							Time of Creation
+						</p>
+					</div>
+					<div>
+						<p class="size-15pt">
+							<?= Date('G:m:i', strtotime($grupo[0]->hora_grupo)) . 'AM'?>
+						</p>
+					</div>
+				</div>
+				<div class="d-flex flex-wrap justify-content-between">
+					<div>
+						<p class="size-15pt">
+							How many people in it
+						</p>
+					</div>
+					<div>
+						<p class="size-15pt">
+							<?= $grupo[0]->participando_grupo ?>
+						</p>
+					</div>
+				</div>
+				<div class="d-flex flex-wrap justify-content-between">
+					<div>
+						<p class="size-15pt">
+							How many people left
+						</p>
+					</div>
+					<div>
+						<p><?= $grupo[0]->saiu_grupo ?></p>
 					</div>
 				</div>
 			</div>
