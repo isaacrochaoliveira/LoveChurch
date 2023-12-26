@@ -1,3 +1,7 @@
+<?php 
+	$this->verMsg();
+	$this->verErro();
+?>
 <section id="config_group">
 	<div class="container">
 		<div class="d-flex flex-wrap align-items-center">
@@ -77,7 +81,7 @@
 			</div>
 			<div class="col-md-6 px-5">
 				<div class="text-center">
-					<img src="<?= URL_BASE ?>assets/img/praysgroups/<?= $grupo[0]->foto_grupo ?>" width="270" id="target">
+					<img src="<?= URL_BASE . $path ?>" width="270" id="target">
 				</div>
 				<div class="py-1">
 					<form action="<?= URL_BASE ?>praysg/upphoto/<?= $grupo[0]->id_praygroup ?>" method="post" enctype="multipart/form-data">

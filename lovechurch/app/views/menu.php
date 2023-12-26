@@ -18,13 +18,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-white">
+                        <a href="<?= URL_BASE ?>praysg" class="nav-link text-white">
                             <div class="d-block text-center mb-1">
                                 <span class="material-symbols-outlined">
                                     help
                                 </span>
                             </div>
-                            DUNNO
+                            Pray's Groups
                         </a>
                     </li>
                     <li>

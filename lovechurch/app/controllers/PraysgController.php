@@ -67,6 +67,11 @@ class PraysgController extends Controller {
 	 */
 	public function config($id_group) {
 		$dados['grupo'] = PraysgService::select("SELECT * FROM $this->table WHERE $this->id = '$id_group'");
+		if ($dados['grupo'][0]->foto_grupo == 'foto-indisponivel.jpg') {
+			$dados['path'] = 'assets/img/'.$dados['grupo'][0]->foto_grupo;
+		} else {
+			$dados['path'] = 'assets/img/praysgroups/'.$dados['grupo'][0]->foto_grupo;
+		}
 		$dados['view'] = 'Grupo_Oracao/Config';
 
 		$this->load("template", $dados);
@@ -79,11 +84,21 @@ class PraysgController extends Controller {
 	public function upphoto($id) {
 		$pray = new \stdClass();
 
+		$dados['grupo'] = PraysgService::select("SELECT * FROM $this->table WHERE $this->id = '$id'");
+		$img = $dados['grupo'][0]->foto_grupo;
+
+		PraysgService::unload($img, 'assets/img/praysgroups/');
+
 		$imagem = $_FILES['banner'];
 
 		$img = PraysgService::analisarimg($imagem, 'assets/img/praysgroups/', 'foto-indisponivel.jpg');
 
-		$pra->id_praygroup = $id;
+		$pray->id_praygroup = $id;
+		$pray->foto_grupo = $img;
+		
+		PraysgService::salvar($pray, $this->id, $this->table);
+		Flash::setMsg("New Image Uploaded!");
+		$this->redirect(URL_BASE . 'praysg/config/' . $id);
 	}
 
 	

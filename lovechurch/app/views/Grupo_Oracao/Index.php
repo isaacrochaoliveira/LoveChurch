@@ -5,7 +5,7 @@
 <section id="prays__groups">
 	<div class="d-flex flex-wrap justify-content-center whole_square_groups mx-2">
 		<div class="col-md-4 card" style="width: 26rem;">
-				<img src="<?= URL_IMAGEM ?>img/praysgroups/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
+				<img src="<?= URL_IMAGEM ?>img/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
 			<div class="card-body">
 				<h5 class="card-title font-roboto">Let's Create Yours</h5>
 				<p class="card-text">It's time to create you own pray group. It's very simple. Click on button below and watching</p>
@@ -16,7 +16,17 @@
 			for ($key = 0; $key < count($grupos); $key++) {
 				?>
 					<div class="col-md-4 card mx-2" style="width: 26rem;">
-							<img src="<?= URL_IMAGEM ?>img/praysgroups/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
+						<?php 
+						if ($grupos[$key]->foto_grupo == 'foto-indisponivel.jpg') {
+							?>
+								<img src="<?= URL_IMAGEM ?>img/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
+							<?php
+						} else {
+							?>
+								<img src="<?= URL_IMAGEM ?>img/praysgroups/<?= $grupos[$key]->foto_grupo ?>" class="card-img-top" alt="Foto Indisponível">
+							<?php
+						}
+						?>	
 						<div class="card-body">	
 		    				<h5 class="card-title font-roboto"><?= $grupos[$key]->nome_grupo ?></h5>
 		    				<p class="card-text"><?= $grupos[$key]->descricao_grupo ?></p>
