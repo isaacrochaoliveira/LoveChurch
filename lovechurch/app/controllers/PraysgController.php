@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace app\controllers;
 
@@ -10,7 +10,7 @@ use app\core\Flash;
 
 class PraysgController extends Controller {
 	/**
-	 * Pârametro Responsável por carregar o nome da tabela desta página 
+	 * Pârametro Responsável por carregar o nome da tabela desta página
 	 * @var string $table
 	 */
 	private $table = 'pray_group';
@@ -29,7 +29,7 @@ class PraysgController extends Controller {
 		$dados['view'] = 'Grupo_Oracao/Index';
 
 		$this->load("template", $dados);
-	}  
+	}
 
 	/**
 	 * Método Responsável por carregar a visualização de criação de criação de grupos
@@ -95,12 +95,41 @@ class PraysgController extends Controller {
 
 		$pray->id_praygroup = $id;
 		$pray->foto_grupo = $img;
-		
+
 		PraysgService::salvar($pray, $this->id, $this->table);
 		Flash::setMsg("New Image Uploaded!");
 		$this->redirect(URL_BASE . 'praysg/config/' . $id);
 	}
 
-	
-}
+	/**
+	 * Método Responsável por carregar a view para o Dono do Grupo cirar as suas regras
+	 * @param integer $id
+	 */
+	public function rules($id) {
+		$dados['grupo'] = $id;
+		$dados['view'] = 'Grupo_Oracao/Rules';
 
+		$this->load("template", $dados);
+	}
+
+	/**
+	 * Método Responsável por salvar as regras feitas pelo adm do grupo
+	 * @param integer $id
+	 */
+	 public function rule($id) {
+		 $rules = new \stdClass();
+
+		 $rules->id_praygroup = $id;
+		 $rules->id_usuario = $_SESSION['id'];
+		 for ($key = 0; $key < 18; $key++) {
+			 $rules->rules_text = isset($_POST['r' . $key]) ? $_POST['r' . $key] : '';
+
+			 if ($rules->rules_text != "") {
+				 PraysgService::salvar($rules, 'id_rules', 'pray_group_rules');
+			 }
+		 }
+		 Flash::setMsg("All the rules was updated successfully");
+		 $this->redirect(URL_BASE . 'praysg/config/' . $id);
+
+	 }
+}

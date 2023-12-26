@@ -84,6 +84,9 @@
 					<img src="<?= URL_BASE . $path ?>" width="270" id="target">
 				</div>
 				<div class="py-1">
+					<a href="<?= URL_BASE . $path ?>" download="groupsbanner" class="btn btn-dark w-100 py-3 size-14pt">Download Gruop's Banner</a>
+				</div>
+				<div class="py-1">
 					<form action="<?= URL_BASE ?>praysg/upphoto/<?= $grupo[0]->id_praygroup ?>" method="post" enctype="multipart/form-data">
 						<button type="button" class="btn btn-dark py-3 w-100 size-14pt" onclick="$('#banner').click()">Group's Banner</button>
 						<input type="file" name="banner" id="banner" class="d-none" onchange="BringPhoto(true)">
@@ -91,7 +94,7 @@
 					</form>
 				</div>
 				<div class="py-1">
-					<a href="" class="btn btn-dark py-3 w-100 size-14pt">Group's Rules</a>
+					<a href="<?= URL_BASE ?>praysg/rules/<?= $grupo[0]->id_praygroup ?>" class="btn btn-dark py-3 w-100 size-14pt">Group's Rules</a>
 				</div>
 				<div class="py-1">
 					<a href="" class="btn btn-dark py-3 w-100 size-14pt">Group's Datas</a>
