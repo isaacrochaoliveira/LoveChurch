@@ -80,9 +80,11 @@
 					<img src="<?= URL_BASE ?>assets/img/praysgroups/<?= $grupo[0]->foto_grupo ?>" width="270" id="target">
 				</div>
 				<div class="py-1">
-					<form action="<?=  ?>"></form>
-					<button type="button" class="btn btn-dark py-3 w-100 size-14pt" onclick="$('#banner').click()">Group's Banner</button>
-					<input type="file" name="banner" id="banner" class="d-none" onchange="BringPhoto()">
+					<form action="<?= URL_BASE ?>praysg/upphoto/<?= $grupo[0]->id_praygroup ?>" method="post" enctype="multipart/form-data">
+						<button type="button" class="btn btn-dark py-3 w-100 size-14pt" onclick="$('#banner').click()">Group's Banner</button>
+						<input type="file" name="banner" id="banner" class="d-none" onchange="BringPhoto(true)">
+						<button type="submit" id="submit_upphoto" class="d-none"></button>
+					</form>
 				</div>
 				<div class="py-1">
 					<a href="" class="btn btn-dark py-3 w-100 size-14pt">Group's Rules</a>

@@ -71,4 +71,21 @@ class PraysgController extends Controller {
 
 		$this->load("template", $dados);
 	}
+
+	/**
+	 * Método Responsável por fazer o upload da imagem de perfil do grupo
+	 * @param integer $id
+	 */
+	public function upphoto($id) {
+		$pray = new \stdClass();
+
+		$imagem = $_FILES['banner'];
+
+		$img = PraysgService::analisarimg($imagem, 'assets/img/praysgroups/', 'foto-indisponivel.jpg');
+
+		$pra->id_praygroup = $id;
+	}
+
+	
 }
+

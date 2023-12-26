@@ -1,4 +1,4 @@
-function BringPhoto() {
+function BringPhoto(boolean) {
 	var target = document.getElementById('target');
 	var file = document.querySelector("#banner").files[0];
 
@@ -43,5 +43,9 @@ function BringPhoto() {
 
 	} else {
 		target.src = "";
+	}
+
+	if (boolean) {
+		$("#submit_upphoto").click();
 	}
 }
