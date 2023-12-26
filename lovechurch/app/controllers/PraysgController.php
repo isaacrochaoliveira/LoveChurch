@@ -41,6 +41,34 @@ class PraysgController extends Controller {
 	}
 
 	/**
+	 * Método Responsável por carregar a view de edição de dados de um grapo
+	 * @param integer $id
+	 */
+	 public function edit($id) {
+		 $dados['grupo'] = PraysgService::select("SELECT * FROM $this->table WHERE $this->id = '$id'");
+
+		 $dados['view'] = 'Grupo_Oracao/Edit';
+		 $this->load("template", $dados);
+	 }
+
+	 /**
+	  *	Método Responsável por salvar a edição do adm do grupo de oração
+	  * @param integer $id
+	  */
+	 public function edited($id) {
+ 	 	$pray = new \stdClass();
+
+		$pray->id_praygroup = $id;
+		$pray->nome_grupo = isset($_POST['nome']) ? $_POST['nome'] : '';
+	  	$pray->descricao_grupo = isset($_POST['descricao']) ? $_POST['descricao'] : '';
+	    $pray->versiculobase_group = isset($_POST['versiculo_base']) ? $_POST['versiculo_base'] : '';
+
+  		PraysgService::salvar($pray, $this->id, $this->table);
+  		Flash::setMsg('Your Group was edited successfully!');
+	  	$this->redirect(URL_BASE . 'praysg');
+	}
+
+	/**
 	 * Método Responsável por salvar as informações do grupo, titulo, descrição e versículo base
 	 */
 	public function salvar() {
@@ -57,7 +85,7 @@ class PraysgController extends Controller {
 		$pray->id_usuario = $_SESSION['id'];
 
 		PraysgService::salvar($pray, $this->id, $this->table);
-		Flash::setMsg('Grupo Cadastrado Com Sucesso!');
+		Flash::setMsg('Your Group was created successfully!');
 		$this->redirect(URL_BASE . 'praysg');
 	}
 

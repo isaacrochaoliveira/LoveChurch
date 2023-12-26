@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$this->verMsg();
 	$this->verErro();
 ?>
@@ -97,7 +97,7 @@
 					<a href="<?= URL_BASE ?>praysg/rules/<?= $grupo[0]->id_praygroup ?>" class="btn btn-dark py-3 w-100 size-14pt">Group's Rules</a>
 				</div>
 				<div class="py-1">
-					<a href="" class="btn btn-dark py-3 w-100 size-14pt">Group's Datas</a>
+					<a href="<?= URL_BASE ?>praysg/edit/<?= $grupo[0]->id_praygroup ?>" class="btn btn-dark py-3 w-100 size-14pt">Group's Datas</a>
 				</div>
 			</div>
 		</div>
