@@ -26,6 +26,7 @@ class PraysgController extends Controller {
 	 */
 	public function index() {
 		$dados['grupos'] = PraysgService::select("SELECT * FROM $this->table");
+		$dados['rules'] = PraysgService::select("SELECT * FROM pray_group_rules;");
 		$dados['view'] = 'Grupo_Oracao/Index';
 
 		$this->load("template", $dados);

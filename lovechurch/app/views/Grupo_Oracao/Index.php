@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$this->verMsg();
 	$this->verErro();
  ?>
@@ -12,11 +12,11 @@
 				<a href="<?= URL_BASE ?>praysg/create" class="btn btn-primary w-100 py-3">Create Group</a>
 				</div>
 		</div>
-		<?php 
+		<?php
 			for ($key = 0; $key < count($grupos); $key++) {
 				?>
 					<div class="col-md-4 card mx-2" style="width: 26rem;">
-						<?php 
+						<?php
 						if ($grupos[$key]->foto_grupo == 'foto-indisponivel.jpg') {
 							?>
 								<img src="<?= URL_IMAGEM ?>img/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
@@ -26,11 +26,30 @@
 								<img src="<?= URL_IMAGEM ?>img/praysgroups/<?= $grupos[$key]->foto_grupo ?>" class="card-img-top" alt="Foto Indisponível">
 							<?php
 						}
-						?>	
-						<div class="card-body">	
+						?>
+						<div class="card-body">
 		    				<h5 class="card-title font-roboto"><?= $grupos[$key]->nome_grupo ?></h5>
 		    				<p class="card-text"><?= $grupos[$key]->descricao_grupo ?></p>
-		    				<?php 
+							<p class="d-inline-flex gap-1">
+								<button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG<?= $grupos[$key]->id_praygroup ?>" aria-expanded="false" aria-controls="collapseExample">
+							    	Ver Regras
+							  	</button>
+							</p>
+							<div class="collapse mb-3" id="collapseG<?= $grupos[$key]->id_praygroup ?>">
+							  	<div class="card card-body">
+									<?php
+										for ($j = 0; $j < count($rules); $j++) {
+											if ($rules[0]->id_praygroup == $grupos[$key]->id_praygroup) {
+												?>
+												<p class="card-text size-14pt"><?= $rules[$j]->rules_text ?></p>
+												<?php
+											}
+										}
+
+									?>
+								</div>
+						  	</div>
+		    				<?php
 		    					if ($grupos[$key]->id_usuario = $_SESSION['id']) {
 									?>
 										<a href="<?= URL_BASE ?>praysg/config/<?= $grupos[$key]->id_praygroup ?>">
