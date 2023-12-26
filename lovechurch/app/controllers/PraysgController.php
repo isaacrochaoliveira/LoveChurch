@@ -53,7 +53,7 @@ class PraysgController extends Controller {
 		$pray->saiu_grupo = 0;
 		$pray->data_group = Date('Y-m-d');
 		$pray->hora_grupo = Date('H:m:s');
-		$pray->foto_grupo = 'sem-foto.jpg';
+		$pray->foto_grupo = 'foto-indisponivel.jpg';
 		$pray->id_usuario = $_SESSION['id'];
 
 		PraysgService::salvar($pray, $this->id, $this->table);
