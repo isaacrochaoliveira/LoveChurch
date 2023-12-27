@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace app\controllers;
 
@@ -33,7 +33,8 @@ class LoginController extends Controller {
  		if (is_array($usuario)) {
  			$this->createSession($usuario);
  			if (isset($_SESSION['id'])) {
-				$this->redirect(URL_BASE . 'home'); 				
+				$this->createDirectory($_SESSION['email']);
+				$this->redirect(URL_BASE . 'home');
  			}
  		} else {
  			Flash::setMsg("Usuário e/ou Senha Incorretos!", -1);
@@ -49,11 +50,21 @@ class LoginController extends Controller {
  	 * @param array $usuario
  	 */
  	private function createSession($usuario) {
- 		
+
  		$_SESSION['id'] = $usuario[0]->id_usuario;
  		$_SESSION['nome'] = $usuario[0]->nome;
  		$_SESSION['email'] = $usuario[0]->email;
  	}
+
+	/**
+	* Método Responsável por criar um diretório de fotos/documentos para cada usuário
+	* @param string $email
+	*/
+	public function createDirectory($email) {
+		if (!(file_exists(PATH_COM . $email))) {
+			mkdir(PATH_COM . $email, 0777, true);
+		}
+	}
 
  	/**
  	 * Método Responsável por fazer o logout do usuário

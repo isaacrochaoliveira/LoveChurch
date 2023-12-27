@@ -133,4 +133,19 @@ class PraysgService {
     public static function unload($img, $path) {
         unlink($path.$img);
     }
+
+	/**
+	* Método Responsável por retornar todos os email dos usuários que fizeram os grupos
+	* @param stdClass $datas
+	*/
+	public static function getEmailPath($datas) {
+		$emails = [];
+		for ($key = 0; $key < count($datas); $key++) {
+			$email = self::select("SELECT * FROM pray_group, usuarios WHERE pray_group.id_usuario = usuarios.id_usuario");
+
+			array_push($emails, $email[0]->email);
+		}
+
+		return $emails;
+	}
 }

@@ -17,13 +17,13 @@
 	<link rel="stylesheet" type="text/css" href="<?= URL_BASE ?>assets/css/styles.css">
 </head>
 <body>
-	<?php 
-		include "menu.php" 
+	<?php
+		include "menu.php"
 	?>
 	<div class="base-geral" id="base_geral">
 		<?php $this->load($view, $viewData) ?>
 	</div>
-	<?php 
+	<?php
 		include "rodape.php";
 	?>
 	<script type="text/javascript" src="<?= URL_BASE ?>assets/js/jquery.min.js"></script>

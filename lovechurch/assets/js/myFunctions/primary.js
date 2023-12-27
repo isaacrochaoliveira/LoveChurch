@@ -49,3 +49,56 @@ function BringPhoto(boolean) {
 		$("#submit_upphoto").click();
 	}
 }
+
+function tab_join(col1, col2, col3) {
+	$("#" + col1).removeClass("d-block");
+	$("#" + col2).removeClass("d-block");
+	$("#" + col3).removeClass("d-none");
+
+	$("#btn-join").removeClass('btn-light');
+	$("#btn-informations").removeClass('btn-dark');
+	$("#btn-rules").removeClass('btn-dark');
+
+	$("#" + col1).addClass("d-none");
+	$("#" + col2).addClass("d-none");
+	$("#" + col1).addClass("d-block");
+
+	$("#btn-join").addClass('btn-dark');
+	$("#btn-rules").addClass("btn-light");
+	$("#btn-informations").addClass('btn-light');
+}
+
+function tab_information(col1, col2, col3) {
+	$("#" + col1).removeClass("d-none");
+	$("#" + col2).removeClass("d-block");
+	$("#" + col3).removeClass("d-block");
+
+	$("#btn-join").removeClass('btn-dark');
+	$("#btn-informations").removeClass('btn-light');
+	$("#btn-rules").removeClass('btn-dark');
+
+	$("#" + col2).addClass("d-none");
+	$("#" + col3).addClass("d-none");
+
+	$("#btn-join").addClass('btn-light');
+	$("#btn-rules").addClass("btn-light");
+	$("#btn-informations").addClass('btn-dark');
+}
+
+function tab_rules(col1, col2, col3) {
+	$("#" + col1).removeClass("d-block");
+	$("#" + col2).removeClass("d-none");
+	$("#" + col3).removeClass("d-block");
+
+	$("#btn-join").removeClass('btn-dark');
+	$("#btn-informations").removeClass('btn-dark');
+	$("#btn-rules").removeClass('btn-light');
+
+	$("#" + col1).addClass("d-none");
+	$("#" + col2).addClass('d-block');
+	$("#" + col3).addClass("d-none");
+
+	$("#btn-join").addClass('btn-light');
+	$("#btn-rules").addClass("btn-dark");
+	$("#btn-informations").addClass('btn-light');
+}

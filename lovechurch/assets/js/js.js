@@ -10,7 +10,7 @@ $(function () {
 	//$('.menuprincipal').slideToggle();
 	//$(this).toggleClass('active');
 	//return false;
-	//});	
+	//});
 
 	$('.senha').click(function () {
 		$('.mostraCampo').slideToggle();
@@ -177,4 +177,3 @@ function excluir_conta(id) {
 		location.href = `http://localhost/www/edsure/projeto-hotel/projeto-hotel/hotel/receber/delete/${id}`;
 	}
 }
-

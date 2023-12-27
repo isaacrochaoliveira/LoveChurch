@@ -23,7 +23,7 @@
 							<?php
 						} else {
 							?>
-								<img src="<?= URL_IMAGEM ?>img/praysgroups/<?= $grupos[$key]->foto_grupo ?>" class="card-img-top" alt="Foto Indisponível">
+								<img src="<?= URL_IMAGEM ?>img/lovechurch/<?= $usuario[$key] . '/' . $grupos[$key]->foto_grupo ?>" class="card-img-top" alt="Foto Indisponível">
 							<?php
 						}
 						?>
@@ -50,13 +50,19 @@
 								</div>
 						  	</div>
 		    				<?php
-		    					if ($grupos[$key]->id_usuario = $_SESSION['id']) {
+		    					if ($grupos[$key]->id_usuario == $_SESSION['id']) {
 									?>
 										<a href="<?= URL_BASE ?>praysg/config/<?= $grupos[$key]->id_praygroup ?>">
 				    						<button class="btn btn-success w-100 py-3">Configurar Grupo</button>
 										</a>
 		    						<?php
-		    					}
+		    					} else {
+									?>
+										<a href="<?= URL_BASE ?>praysg/joinin/<?= $grupos[$key]->id_praygroup ?>">
+											<button class="btn btn-dark w-100 py-3">Participate</button>
+										</a>
+									<?php
+								}
 		    				?>
 		  				</div>
 					</div>

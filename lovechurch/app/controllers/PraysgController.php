@@ -26,6 +26,7 @@ class PraysgController extends Controller {
 	 */
 	public function index() {
 		$dados['grupos'] = PraysgService::select("SELECT * FROM $this->table");
+		$dados['usuario'] = PraysgService::getEmailPath($dados['grupos']);
 		$dados['rules'] = PraysgService::select("SELECT * FROM pray_group_rules;");
 		$dados['view'] = 'Grupo_Oracao/Index';
 
@@ -99,7 +100,7 @@ class PraysgController extends Controller {
 		if ($dados['grupo'][0]->foto_grupo == 'foto-indisponivel.jpg') {
 			$dados['path'] = 'assets/img/'.$dados['grupo'][0]->foto_grupo;
 		} else {
-			$dados['path'] = 'assets/img/praysgroups/'.$dados['grupo'][0]->foto_grupo;
+			$dados['path'] = 'assets/img/lovechurch/' . $_SESSION['email'] . '/' . $dados['grupo'][0]->foto_grupo;
 		}
 		$dados['view'] = 'Grupo_Oracao/Config';
 
@@ -160,5 +161,17 @@ class PraysgController extends Controller {
 		 Flash::setMsg("All the rules was updated successfully");
 		 $this->redirect(URL_BASE . 'praysg/config/' . $id);
 
+	 }
+
+	 /**
+	 * Método Responsável por carregar a view de entrada no grupo de oração
+	 * @param string $id
+	 */
+	 public function joinin($id) {
+		$dados['grupos'] = PraysgService::select("SELECT * FROM $this->table WHERE $this->id = '$id'");
+		$dados['usuario'] = PraysgService::getEmailPath($dados['grupos']);
+	 	$dados['view'] = 'Grupo_Oracao/Join';
+		
+	 	$this->load("template", $dados);
 	 }
 }

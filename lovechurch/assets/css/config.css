@@ -95,3 +95,11 @@ a {
 .ls-2px {
 	letter-spacing: 2px;
 }
+
+.list-style-none {
+	list-style: none;
+}
+
+.btn-dark {
+	border-radius: 0px;
+}

@@ -80,3 +80,14 @@ header ul li {
 #prays__groups .whole_square_groups h5 {
 	font-weight: 600;
 }
+
+/* CSS TELA DE ENTRADA NO GRUPO DE ORAÇÃO */
+
+.bg-banner-full-width {
+	color: transparent;
+	padding: 220px 50px;
+}
+
+.border-tab__windows {
+	border-top: 10px solid var(--colors-dark);
+}

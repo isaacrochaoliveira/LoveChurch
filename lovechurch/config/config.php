@@ -15,6 +15,7 @@ define("TITULO_SITE","mjailton-ligando vc ao mundo do conhecimento");
 define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"].'/projects/LoveChurch/lovechurch/');
 define('URL_IMAGEM', "http://". $_SERVER['HTTP_HOST'] . "/projects/LoveChurch/lovechurch/assets/");
 define("SESSION_LOGIN","usuario_agenda_logado");
+define("PATH_COM", 'C:\wamp64\www\projects\LoveChurch\lovechurch\assets\img\lovechurch\\');
 
 define("VERSION", 'v1.0.0');
 
