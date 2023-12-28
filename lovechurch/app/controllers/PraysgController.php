@@ -168,10 +168,11 @@ class PraysgController extends Controller {
 	 * @param string $id
 	 */
 	 public function joinin($id) {
-		$dados['grupos'] = PraysgService::select("SELECT * FROM $this->table WHERE $this->id = '$id'");
+		$dados['grupos'] = PraysgService::select("SELECT * FROM $this->table, usuarios WHERE $this->id = '$id' AND usuarios.id_usuario = $this->table.id_usuario");
+		$dados['rules'] = PraysgService::select("SELECT * FROM pray_group_rules;");
 		$dados['usuario'] = PraysgService::getEmailPath($dados['grupos']);
 	 	$dados['view'] = 'Grupo_Oracao/Join';
-		
+
 	 	$this->load("template", $dados);
 	 }
 }
