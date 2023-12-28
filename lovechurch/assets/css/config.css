@@ -100,6 +100,21 @@ a {
 	list-style: none;
 }
 
-.btn-dark {
+.font-italic {
+	font-style: italic;
+}
+
+.btn {
 	border-radius: 0px;
+}
+
+.btn-light.border {
+	border: 3px solid var(--colors-dark) !important;
+	transition: 0.3s;
+}
+
+.btn-light.border:hover {
+	background-color: var(--colors-dark);
+	color: var(--colors-light);
+	transform: scale(0.9);
 }

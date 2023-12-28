@@ -24,9 +24,21 @@
 		</div>
 		<div class="container border-tab__windows">
 			<div id="div__join" class="d-block">
-				<img src="<?= URL_BASE ?>assets/img/lovechurch/<?= $usuario[0] ?>/<?= $grupos[0]->foto_grupo ?>" alt="" width="350">
-				<div class="">
-					<h3><?= $grupos[0]->nome_grupo ?></h3>
+				<div class="row py-5">
+					<div class="col-md-3">
+						<img src="<?= URL_BASE ?>assets/img/lovechurch/<?= $usuario[0] ?>/<?= $grupos[0]->foto_grupo ?>" alt="" width="350">
+					</div>
+					<div class="col-md-6">
+						<h3 class="font-roboto size-30pt"><?= $grupos[0]->nome_grupo ?></h3>
+						<hr>
+						<p><?= $grupos[0]->descricao_grupo ?></p>
+						<p class="size-15pt font-italic"><?= $grupos[0]->participando_grupo ?> People Who Participanting</p>
+					</div>
+					<div class="col-md-3 my-auto">
+						<a href="#" class="btn btn-light border py-3 my-2 w-100">Sing-in</a>
+						<a href="#" class="btn btn-light border py-3 my-2 w-100">Report Group</a>
+						<a href="#" class="btn btn-light border py-3 my-2 w-100">Block Group</a>
+					</div>
 				</div>
 			</div>
 			<div class="d-none" id="div__informations">
