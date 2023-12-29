@@ -34,9 +34,15 @@
 								<button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG<?= $grupos[$key]->id_praygroup ?>" aria-expanded="false" aria-controls="collapseExample">
 							    	View Rules
 							  	</button>
-								<a href="<?= URL_BASE ?>praysg/joinin/<?= $grupos[$key]->id_praygroup ?>" class="btn btn-dark">
-							    	View Group
-							  	</a>
+								<?php
+									if ($grupos[$key]->id_usuario == $_SESSION['id']) {
+										?>
+											<a href="<?= URL_BASE ?>praysg/joinin/<?= $grupos[$key]->id_praygroup ?>" class="btn btn-dark">
+												View Group
+											</a>
+										<?php
+									}
+								?>
 							</p>
 							<div class="collapse mb-3" id="collapseG<?= $grupos[$key]->id_praygroup ?>">
 							  	<div class="card card-body">

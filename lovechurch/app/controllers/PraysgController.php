@@ -85,6 +85,7 @@ class PraysgController extends Controller {
 		$pray->hora_grupo = Date('H:m:s');
 		$pray->foto_grupo = 'foto-indisponivel.jpg';
 		$pray->id_usuario = $_SESSION['id'];
+		$pray->whatsapplink_grupo = isset($_POST['whatsapplink_grupo']) ? $_POST['whatsapplink_grupo'] : '';
 
 		PraysgService::salvar($pray, $this->id, $this->table);
 		Flash::setMsg('Your Group was created successfully!');
@@ -198,5 +199,13 @@ class PraysgController extends Controller {
 	 	$dados['view'] = 'Grupo_Oracao/Join';
 
 	 	$this->load("template", $dados);
+	 }
+
+	 /**
+	 * Método Responsável por ´da um block em um grupo de oração, fazendo ele não aparecer mais para o usuário logado
+	 * @param integer $id
+	 */
+	 public function block($id) {
+		 
 	 }
 }
