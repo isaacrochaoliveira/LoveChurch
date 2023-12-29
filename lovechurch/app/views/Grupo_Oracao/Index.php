@@ -32,8 +32,11 @@
 		    				<p class="card-text"><?= $grupos[$key]->descricao_grupo ?></p>
 							<p class="d-inline-flex gap-1">
 								<button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseG<?= $grupos[$key]->id_praygroup ?>" aria-expanded="false" aria-controls="collapseExample">
-							    	Ver Regras
+							    	View Rules
 							  	</button>
+								<a href="<?= URL_BASE ?>praysg/joinin/<?= $grupos[$key]->id_praygroup ?>" class="btn btn-dark">
+							    	View Group
+							  	</a>
 							</p>
 							<div class="collapse mb-3" id="collapseG<?= $grupos[$key]->id_praygroup ?>">
 							  	<div class="card card-body">

@@ -117,17 +117,41 @@ class PraysgController extends Controller {
 		$dados['grupo'] = PraysgService::select("SELECT * FROM $this->table WHERE $this->id = '$id'");
 		$img = $dados['grupo'][0]->foto_grupo;
 
-		PraysgService::unload($img, 'assets/img/praysgroups/');
+		PraysgService::unload($img, 'assets/img/lovechurch'.$_SESSION['email'] . '/');
 
 		$imagem = $_FILES['banner'];
 
-		$img = PraysgService::analisarimg($imagem, 'assets/img/praysgroups/', 'foto-indisponivel.jpg');
+		$img = PraysgService::analisarimg($imagem, 'assets/img/lovechurch/' . $_SESSION['email'] . '/', 'foto-indisponivel.jpg');
 
 		$pray->id_praygroup = $id;
 		$pray->foto_grupo = $img;
 
 		PraysgService::salvar($pray, $this->id, $this->table);
 		Flash::setMsg("New Image Uploaded!");
+		$this->redirect(URL_BASE . 'praysg/config/' . $id);
+	}
+
+	/**
+	* Método Responsável por salvar o banner do grupo de oração
+	* @param integer $id
+	*/
+	public function upbanner($id) {
+		$pray = new \stdClass();
+
+		$dados['grupo'] = PraysgService::select("SELECT * FROM $this->table WHERE $this->id = '$id'");
+		$img = $dados['grupo'][0]->banner_grupo;
+
+		PraysgService::unload($img, 'assets/img/lovechurch/'.$_SESSION['email'] . '/');
+
+		$imagem = $_FILES['banner'];
+
+		$img = PraysgService::analisarimg($imagem, 'assets/img/lovechurch/' . $_SESSION['email'] . '/', 'foto-indisponivel.jpg');
+
+		$pray->id_praygroup = $id;
+		$pray->banner_grupo = $img;
+
+		PraysgService::salvar($pray, $this->id, $this->table);
+		Flash::setMsg("New Banner Uploaded!");
 		$this->redirect(URL_BASE . 'praysg/config/' . $id);
 	}
 

@@ -1,6 +1,6 @@
 <style media="screen">
 	.bg-banner-full-width {
-		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/img/lovechurch/<?= $usuario[0] ?>/lovechurch-banner.png") no-repeat;
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/img/lovechurch/<?= $usuario[0] ?>/<?= $grupos[0]->banner_grupo ?>") no-repeat;
 		background-position: center;
 		background-size: cover;
 		background-attachment: fixed;
@@ -32,7 +32,6 @@
 						<h3 class="font-roboto size-30pt"><?= $grupos[0]->nome_grupo ?></h3>
 						<hr>
 						<p><?= $grupos[0]->descricao_grupo ?></p>
-						<p class="size-15pt font-italic"><?= $grupos[0]->participando_grupo ?> People Who Participanting</p>
 					</div>
 					<div class="col-md-3 my-auto">
 						<a href="https://chat.whatsapp.com/HdnW7Dfjq65DtAnBER2uIH" target="_blank" class="btn btn-light border py-3 my-2 w-100">Sing-in</a>
@@ -62,8 +61,6 @@
 						<p><?= $grupos[0]->versiculobase_group ?></p>
 						<p class="size-15pt font-italic"><?= Date('m/d/Y', strtotime($grupos[0]->data_group)) ?></p>
 						<p class="size-15pt font-italic"><?= Date('g:m:s', strtotime($grupos[0]->hora_grupo)) . $timeZone ?></p>
-						<p class="size-15pt font-italic"><?= $grupos[0]->participando_grupo ?> People Who Participanting</p>
-						<p class="size-15pt font-italic"><?= $grupos[0]->saiu_grupo ?> People Who left the group</p>
 					</div>
 					<div class="col-md-3 my-auto">
 						<a href="#" class="btn btn-light border py-3 my-2 w-100">Report Group</a>
