@@ -25,11 +25,15 @@ class PraysgController extends Controller {
 	 * Método Responsável por carregar a index e os grupos de oração cadastrados
 	 */
 	public function index() {
-		$dados['grupos'] = PraysgService::select("SELECT * FROM $this->table");
+		$dados['grupos'] = PraysgService::getGroupsAvailable($_SESSION['id']);
 		$dados['usuario'] = PraysgService::getEmailPath($dados['grupos']);
 		$dados['rules'] = PraysgService::select("SELECT * FROM pray_group_rules;");
-		$dados['view'] = 'Grupo_Oracao/Index';
 
+		echo "<pre>";
+		print_r($dados['grupos']);
+		echo "</pre>"; exit;
+
+		$dados['view'] = 'Grupo_Oracao/Index';
 		$this->load("template", $dados);
 	}
 
@@ -206,6 +210,15 @@ class PraysgController extends Controller {
 	 * @param integer $id
 	 */
 	 public function block($id) {
-		 
+		 $block = new \stdClass();
+
+		 $block->id_group = $id;
+		 $block->id_usuario = $_SESSION['id'];
+		 $block->data_block = Date('Y-m-d');
+		 $block->hora_block = Date('G:m:i');
+
+		 PraysgService::salvar($block, 'id_blockgp', 'block_groupsp');
+		 Flash::setMsg('The Group will never be shown again to you', 3);
+		 $this->redirect(URL_BASE . 'praysg');
 	 }
 }

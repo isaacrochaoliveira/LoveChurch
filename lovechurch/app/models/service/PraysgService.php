@@ -148,4 +148,23 @@ class PraysgService {
 
 		return $emails;
 	}
+
+	/**
+	* Método Responsável por retornar os grupos que não estão bloqueadas pelo usuário
+	* @param integer $id_usuario
+	*/
+	public static function getGroupsAvailable($id_usuario) {
+		$groups = new \stdClass();
+		$datas = self::select("SELECT * FROM pray_group;");
+		$blocks = self::select("SELECT * FROM block_groupsp;");
+		for ($key = 0; $key < count($datas); $key++) {
+			for ($i = 0; $i < count($blocks); $i++) {
+				if (($datas[$key]->id_praygroup == $blocks[$i]->id_group) AND ($id_usuario == $blocks[$i]->id_usuario)) {
+					$groups->id_praygroup = $datas[$key]->id_praygroup;
+				}
+			}
+		}
+
+		return $groups;
+	}
 }
