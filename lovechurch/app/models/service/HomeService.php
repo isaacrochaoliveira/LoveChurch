@@ -125,125 +125,18 @@ class HomeService {
         return $imgs;
     }
 
-    /**
-     * Método Responsável por pegar o valor total de contas e mada-lá a index
-     * @param array $receber
-     */
-    public static function getTotal($receber)
-    {
-        $valores = [];
-        for ($key = 0; $key < count($receber); $key++) {
-            $valor = 0;
+	/**
+	* Método Responsável por obter o email do adm de cada grupo
+	* @param stdClass $std
+	*/
+	public static function getEmailPath($std) {
+		$emails = [];
+		for ($key = 0; $key < count($std); $key++) {
+			$email = self::select("SELECT * FROM pray_group, usuarios WHERE pray_group.id_usuario = usuarios.id_usuario");
 
-            $id_hospede = $receber[$key]->id;
+			array_push($emails, $email[0]->email);
+		}
 
-            $result = ReceberService::select("SELECT * FROM detalhes WHERE detalhes.id_hospede = $id_hospede");
-
-            for ($i = 0; $i < count($result); $i++) {
-                $valor += $result[$i]->valor_detalhes;
-            }
-            array_push($valores, $valor);
-            
-        }
-
-        return $valores;
-    }
-
-    /**
-     * Método Responsável por pegar a quantidade de arquivos que o hóspede tem cadastrado naquela conta
-     * @param array $detalhes
-     */
-    public static function getArquivos($detalhes)
-    {
-        $counts = [];
-        for ($key = 0; $key < count($detalhes); $key++) {
-            $result = self::select("SELECT * FROM arquivos WHERE id_detalhes = " . $detalhes[$key]->id_detalhes);
-
-            array_push($counts, count($result));
-        }
-
-        return $counts;
-    }
-
-    /**
-     * Método Responsável por pegar o número total de contas pagas e não pagas do hóspedes
-     * @param array $receber
-     */
-    public static function getDetalhes($receber)
-    {
-
-        $contas_counts = [];
-        for ($key = 0; $key < count($receber); $key++) {
-            $id_hospede = $receber[$key]->id;
-
-            $contas =  self::select("SELECT * FROM detalhes WHERE id_hospede = '$id_hospede'");
-
-            array_push($contas_counts, count($contas));
-        }
-
-        return $contas_counts;
-    }
-
-    /**
-     * Método Responsável por verificar se o hóspede solicitado já tem uma reserva cadastrada
-     * @param integer $id_hospede
-     */
-    public static function existeReservaouReceber($id_hospede) {
-        $ext = [];
-        $ext = self::select("SELECT * FROM reservas WHERE hospede = '$id_hospede'");
-        if (count($ext) == 0) {
-            $ext = self::select("SELECT * FROM receber WHERE hospede = '$id_hospede'");
-        }
-
-        return $ext;
-    }
-
-    /**
-     * Método Responsável por verificar se há ou não reserva para esse hóspede porque se não tiver, a URL será mudada
-     * @param integer $id_detalhes
-     */
-    public static function SemReservas($id_detalhes, $explation='ID da tabela Detalhes') {
-        if ($explation == 'ID da tabela Detalhes') {
-            $dados = self::select("SELECT * FROM detalhes WHERE id_detalhes = '$id_detalhes' AND id_reserva = 0");
-    
-            if (count($dados) > 0) {
-                return 'detailssem';
-            } else {
-                return 'details';
-            }
-        } else {
-            $dados = self::select("SELECT * FROM receber WHERE hospede = '$id_detalhes' AND id_reserva = 0");
-    
-            if (count($dados) > 0) {
-                return 'detailssem';
-            } else {
-                return 'details';
-            }
-        }
-    }
-
-    /**
-     * Método Responsável por analisar qual filtro foi preenchido e devolver o resultado congruente
-     * @param string $nome
-     * @param integer $quarto
-     * @param integer $exs
-     */
-    public static function FilterBills($nome, $quarto, $exs=1) {
-        $result = '';
-        
-        
-        if ($exs == 1) {
-            if ($nome != "") {
-                $result = self::select("SELECT * FROM detalhes, receber, hospedes, reservas WHERE hospedes.nome LIKE '$nome%' AND hospedes.id = detalhes.id_hospede AND detalhes.id_receber = receber.id_receber AND reservas.id_reserva = receber.id_reserva LIMIT 1");
-            } else {
-                $result = self::select("SELECT *, quartos.numero, quartos.tipo, quartos.id_quartos FROM detalhes, receber, hospedes, reservas, quartos WHERE hospedes.id = detalhes.id_hospede AND receber.id_reserva = reservas.id_reserva AND reservas.tipo_quarto = quartos.tipo AND reservas.quarto = quartos.id_quartos AND quartos.numero = '$quarto' LIMIT 1");
-            }
-        } else {
-            if ($nome != "") {
-                $result = self::select("SELECT * FROM detalhes, receber, hospedes WHERE hospedes.nome LIKE '$nome%' AND detalhes.id_hospede = hospedes.id AND receber.id_receber = detalhes.id_receber AND receber.id_reserva = 0 LIMIT 1");
-            }
-        }
-        
-        return $result;
-    }
+		return $emails;
+	}
 }

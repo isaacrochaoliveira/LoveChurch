@@ -10,7 +10,7 @@
 			<div class="col-md-6" id="column__letspray">
 				<h3 class="font-roboto size-36pt">Create you first pray</h3>
 				<a href="" class="btn_letspray">
-					Click in here 
+					Click in here
 				</a>
 			</div>
 		</div>
@@ -47,22 +47,32 @@
 		<h3 class="size-20pt font-roboto">We created a full community to you pray to each other and helped yours selfs.<br>Let`s call it "Pray`s Groups"</h3>
 		<div class="row whole_square_groups mt-4">
 			<div class="col-md-4 card" style="width: 26rem;">
-  				<img src="<?= URL_IMAGEM ?>img/home/praysgroups/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
+  				<img src="<?= URL_IMAGEM ?>img/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
 				<div class="card-body">
     				<h5 class="card-title font-roboto">Let's Create Yours</h5>
     				<p class="card-text">It's time to create you own pray group. It's very simple. Click on button below and watching</p>
     				<a href="<?= URL_BASE ?>praysg/create" class="btn btn-primary w-100 py-3">Create Group</a>
   				</div>
 			</div>
-			<?php 
+			<?php
 				for ($key = 0; $key < count($prays_groups); $key++) {
 					?>
 						<div class="col-md-4 card" style="width: 26rem;">
-  							<img src="<?= URL_IMAGEM ?>img/home/praysgroups/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
+  							<img src="<?= URL_IMAGEM ?>img/lovechurch/<?= $emails[$key] ?>/<?= $prays_groups[$key]->foto_grupo ?>" class="card-img-top" alt="Foto Indisponível">
 							<div class="card-body">
 			    				<h5 class="card-title font-roboto">Let's Create Yours</h5>
 			    				<p class="card-text">It's time to create you own pray group. It's very simple. Click on button below and watching</p>
-			    				<a href="#" class="btn btn-primary w-100 py-3">Create Group</a>
+								<?php
+									if ($_SESSION['id'] == $prays_groups[$key]->id_usuario) {
+										?>
+											<a href="#" class="btn btn-dark w-100 py-3">Group's Settings</a>
+										<?php
+									} else {
+										?>
+											<a href="#" class="btn btn-success w-100 py-3">Participate</a>
+										<?php
+									}
+								?>
 			  				</div>
 						</div>
 					<?php
@@ -71,3 +81,4 @@
 		</div>
 	</div>
 </section>
+<section>

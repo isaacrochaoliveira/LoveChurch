@@ -36,7 +36,6 @@
 					<div class="col-md-3 my-auto">
 						<a href="<?= $grupos[0]->whatsapplink_grupo ?>" target="_blank" class="btn btn-light border py-3 my-2 w-100">Sing-in</a>
 						<a href="https://w.app/pkb5en" taget="_blank" class="btn btn-light border py-3 my-2 w-100" title="WhatsApp do Administrador">Report Group</a>
-						<a href="<?= URL_BASE ?>praysg/block/<?= $grupos[0]->id_praygroup ?>" class="btn btn-light border py-3 my-2 w-100">Block Group</a>
 					</div>
 				</div>
 			</div>
@@ -64,7 +63,6 @@
 					</div>
 					<div class="col-md-3 my-auto">
 						<a href="https://w.app/pkb5en" target="_blank" class="btn btn-light border py-3 my-2 w-100">Report Group</a>
-						<a href="#" class="btn btn-light border py-3 my-2 w-100">Block Group</a>
 					</div>
 				</div>
 			</div>
@@ -86,7 +84,6 @@
 					</div>
 					<div class="col-md-3 my-auto">
 						<a href="https://w.app/pkb5en" target="_blank" class="btn btn-light border py-3 my-2 w-100">Report Group</a>
-						<a href="#" class="btn btn-light border py-3 my-2 w-100">Block Group</a>
 					</div>
 				</div>
 			</div>
