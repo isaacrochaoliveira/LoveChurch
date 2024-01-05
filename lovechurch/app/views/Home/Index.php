@@ -43,8 +43,8 @@
 <section id="prays__groups">
 	<div class="container">
 		<h2>Pray's Groups. Did you know that?</h2>
-		<hr>
 		<h3 class="size-20pt font-roboto">We created a full community to you pray to each other and helped yours selfs.<br>Let`s call it "Pray`s Groups"</h3>
+		<hr>
 		<div class="row whole_square_groups mt-4">
 			<div class="col-md-4 card" style="width: 26rem;">
   				<img src="<?= URL_IMAGEM ?>img/foto-indisponivel.jpg" class="card-img-top" alt="Foto Indisponível">
@@ -81,4 +81,9 @@
 		</div>
 	</div>
 </section>
-<section>
+<section id="social_media">
+	<div class="">
+		<h2>Follow us on our Social Media</h2>
+	</div>
+	<hr>
+</section>
