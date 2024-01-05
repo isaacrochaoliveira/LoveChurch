@@ -82,8 +82,15 @@
 	</div>
 </section>
 <section id="social_media">
-	<div class="">
-		<h2>Follow us on our Social Media</h2>
+	<div class="container">
+		<div class="">
+			<h2>Follow us on our Social Media</h2>
+		</div>
+		<hr>
+		<div class="d-flex flex-wrap">
+			<div class="">
+				I
+			</div>
+		</div>
 	</div>
-	<hr>
 </section>
