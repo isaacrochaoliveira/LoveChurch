@@ -88,13 +88,13 @@
 		</div>
 		<hr>
 		<div class="d-flex flex-wrap">
-			<div class="">
+			<div class="col-md-4 square__media">
 				I
 			</div>
-			<div class="">
+			<div class="col-md-4 square__media">
 				F
 			</div>
-			<div class="">
+			<div class="col-md-4 square__media">
 				W
 			</div>
 		</div>
