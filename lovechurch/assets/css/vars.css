@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 :root {
-	/* FONTS-FAMILYS */
-	--font-great-vibes: 'Great Vibes';
-	--font-satisfy: 'Satisfy';
-	--font-roboto: 'Roboto';
+    /* FONTS-FAMILYS */
+    --font-great-vibes: 'Great Vibes';
+    --font-satisfy: 'Satisfy';
+    --font-roboto: 'Roboto';
 
-	/* CORES */
-	--colors-blue: #0B5ED7;
-	--colors-gray: #ccc;
-	--colors-light: #fff;
-	--colors-dark: #212529;
+    /* CORES */
+    --colors-blue: #0B5ED7;
+    --colors-gray: #ccc;
+    --colors-light: #fff;
+    --colors-dark: #212529;
 }

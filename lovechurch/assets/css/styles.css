@@ -4,105 +4,109 @@
 
 /* HEADER'S CSS */
 header span {
-	font-size: 24pt !important;
+    font-size: 24pt !important;
 }
 
 header ul li {
-	padding-right: 5px;
+    padding-right: 5px;
 }
 
 /* HOME CSS */
 
 #section__begin {
-	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/home/background__paper.jpg') no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	padding: 100px 0px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/home/background__paper.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 100px 0px;
 }
 
 .container #letspray__background {
-	background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url('../img/home/letsplay__background.jpg') no-repeat;
-	background-size: cover;
-	background-position: top;
-	padding: 550px 0px 10px 10px;
-	color: var(--colors-light);
-	text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url('../img/home/letsplay__background.jpg') no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 550px 0px 10px 10px;
+    color: var(--colors-light);
+    text-align: center;
 }
 
 .container #column__letspray {
-	padding: 250px 0px;
-	text-align: center;
+    padding: 250px 0px;
+    text-align: center;
 }
 
 .container #column__letspray h3 {
-	line-height: 67pt;
+    line-height: 67pt;
 }
 
 .container #column__letspray .btn_letspray {
-	background: var(--colors-dark);
-	color: var(--colors-light);
-	padding: 16px 65px;
-	text-decoration: none;
-	font-size: 14pt;
-	margin-top: 10px;
+    background: var(--colors-dark);
+    color: var(--colors-light);
+    padding: 16px 65px;
+    text-decoration: none;
+    font-size: 14pt;
+    margin-top: 10px;
 }
 
 /* SECTION DATAS CSS */
 
 #section__datas {
-	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/home/background__paper.jpg') no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	padding: 100px 0px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/home/background__paper.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 0px;
 }
 
 #section__datas .square__datas {
-	text-align: center;
-	padding: 20px 40px;
+    text-align: center;
+    padding: 20px 40px;
 }
 
 #section__datas .square__datas i {
-	font-size: 26pt;
+    font-size: 26pt;
 }
 
 /* SECTION PRAY'S GRUOPS */
 
 #prays__groups {
-	padding: 100px 0px;
+    padding: 100px 0px;
 }
 
 #prays__groups .whole_square_groups img {
-	width: 100%;
+    width: 100%;
 }
 
 #prays__groups .whole_square_groups h5 {
-	font-weight: 600;
+    font-weight: 600;
 }
 
 /* CSS TELA DE ENTRADA NO GRUPO DE ORAÇÃO */
 
 .bg-banner-full-width {
-	color: transparent;
-	padding: 220px 50px;
+    color: transparent;
+    padding: 220px 50px;
 }
 
 .border-tab__windows {
-	border-top: 10px solid var(--colors-dark);
+    border-top: 10px solid var(--colors-dark);
 }
 
 /* CSS SOCIAL MEDIA */
 #social_media {
-	background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/home/background__paper.jpg') no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	padding: 100px 0px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../img/home/background__paper.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 0px;
 }
 
 #social_media .square__media {
-	border: 2px solid var(--colors-dark);
-	text-align: center;
-	padding: 20px 0px;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#social_media .square__media a {
+    text-decoration: none;
+    color: var(--colors-blue);
 }

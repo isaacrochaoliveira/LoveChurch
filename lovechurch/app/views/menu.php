@@ -20,21 +20,17 @@
                     <li>
                         <a href="<?= URL_BASE ?>praysg" class="nav-link text-white">
                             <div class="d-block text-center mb-1">
-                                <span class="material-symbols-outlined">
-                                    help
-                                </span>
+                                <i class="fa-solid fa-person-praying size-22pt"></i>
                             </div>
                             Pray's Groups
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-white">
+                        <a href="<?= URL_BASE ?>bible" class="nav-link text-white">
                             <div class="d-block text-center mb-1">
-                                <span class="material-symbols-outlined">
-                                    help
-                                </span>
+                                <i class="fa-solid fa-book-bible size-22pt"></i>
                             </div>
-                            DUNNO
+                            Bible Reading
                         </a>
                     </li>
                     <li>

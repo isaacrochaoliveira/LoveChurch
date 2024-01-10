@@ -1,120 +1,120 @@
 @charset "UTF-8";
 
 body {
-	font-family: var(--font-roboto);
+    font-family: var(--font-roboto);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-great-vibes);
+    font-family: var(--font-great-vibes);
 }
 
 h1 {
-	font-size: 100px;
+    font-size: 100px;
 }
 
 h2 {
-	font-size: 80px;
+    font-size: 80px;
 }
 
 h3 {
-	font-size: 60px;
+    font-size: 60px;
 }
 
 h4 {
-	font-size: 50px;
+    font-size: 50px;
 }
 
 h5 {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 h6 {
-	font-kerning: 20px;
+    font-kerning: 20px;
 }
 
 p {
-	font-size: 17pt;
+    font-size: 17pt;
 }
 
 a {
-	color: var(--colors-blue);
+    color: var(--colors-blue);
 }
 
 .font-satisfy {
-	font-family: var(--font-satisfy);
+    font-family: var(--font-satisfy);
 }
 
 .font-roboto {
-	font-family: var(--font-roboto);
+    font-family: var(--font-roboto);
 }
 
 .bg-gray {
-	background-color: var(--colors-gray) !important;
+    background-color: var(--colors-gray) !important;
 }
 
 .size-45pt {
-	font-size: 45pt;
+    font-size: 45pt;
 }
 
 .size-40pt {
-	font-size: 40pt;
+    font-size: 40pt;
 }
 
 .size-36pt {
-	font-size: 36pt;
+    font-size: 36pt;
 }
 
 .size-30pt {
-	font-size: 30pt;
+    font-size: 30pt;
 }
 
 .size-26pt {
-	font-size: 26pt;
+    font-size: 26pt;
 }
 
 .size-22pt {
-	font-size: 22pt;
+    font-size: 22pt;
 }
 
 .size-20pt {
-	font-size: 20pt;
+    font-size: 20pt;
 }
 
 .size-17pt {
-	font-size: 17px;
+    font-size: 17px;
 }
 
 .size-15pt {
-	font-size: 15pt;
+    font-size: 15pt;
 }
 
 .size-14pt {
-	font-size: 14pt;
+    font-size: 14pt;
 }
 
 .ls-2px {
-	letter-spacing: 2px;
+    letter-spacing: 2px;
 }
 
 .list-style-none {
-	list-style: none;
+    list-style: none;
 }
 
 .font-italic {
-	font-style: italic;
+    font-style: italic;
 }
 
 .btn {
-	border-radius: 0px;
+    border-radius: 0px;
 }
 
 .btn-light.border {
-	border: 3px solid var(--colors-dark) !important;
-	transition: 0.3s;
+    border: 3px solid var(--colors-dark) !important;
+    transition: 0.3s;
 }
 
 .btn-light.border:hover {
-	background-color: var(--colors-dark);
-	color: var(--colors-light);
-	transform: scale(0.9);
+    background-color: var(--colors-dark);
+    color: var(--colors-light);
+    transform: scale(0.9);
 }
